@@ -39,9 +39,9 @@
                             <!-- We add step ="0.01" so that it accepts decimals -->
                             <input type="number" step="0.01"  id="price" class="form-control" placeholder="Product Price">
                         </div>
-
+                        <!--if I add min = "1900" to accept a minimum value  -->
                         <div class="form-group">
-                            <input type="number" id="year" class="form-control" placeholder="Year Product">
+                            <input type="number" id="year" min="1900" value="2018" class="form-control" placeholder="Year Product">
                         </div>
 
                         <!-- INPUT SUBMIT -->
@@ -51,14 +51,15 @@
 
                 </div>
             </div>
+            <!-- LIST THE PRODUCTS -->
+            <div id="product-list" class="col-md-8">
 
-            <div class="col-md-8">
             </div>
 
         </div>
     </div>
 
 
-
+<script src="app.js"  >  </script>
 </body>
 </html>
