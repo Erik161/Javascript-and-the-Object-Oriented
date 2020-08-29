@@ -19,30 +19,33 @@
         <!-- APPLICATION -->
         <div id="App" class="row pt-5">
             <div class="col-md-4">
+                <!-- CARD -->
                 <div class="card">
+                    <!-- CARD-HEADER -->
                     <div class="card-header">
                         <h4>Add A product</h4>
                     </div>
-
+                    <!-- FORM CARD-BODY -->
                     <form id="product-form" class="card-body">
+
+                        <!-- CLASS FORM-GROUP -->
+                        
                         <div class="form-group">
                             <input type="text" id="name" placeholder="Product Name"
                             class="form-control">
                         </div>
 
                         <div class="form-group">
-                            <input type="number" id="price" class="form-control" placeholder="Product Price">
+                            <!-- Agregamos step="0.01" para que acepte decimales -->
+                            <input type="number" step="0.01"  id="price" class="form-control" placeholder="Product Price">
                         </div>
 
                         <div class="form-group">
                             <input type="number" id="year" class="form-control" placeholder="Year Product">
                         </div>
 
-
+                        <!-- INPUT SUBMIT -->
                         <input type="submit" value="Save" class="btn btn-primary btn-block">
-
-
-
 
                     </form>
 
