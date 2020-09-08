@@ -24,14 +24,17 @@ class UI {
 
 // DOM EVENTS
 document.getElementById('product-form')
-.addEventListener('submit', function () {
+                                        //(e) se abrevia como evento
+.addEventListener('submit', function (e) {
     const name= document.getElementById('name').value;
     const price= document.getElementById('price').value;
     const year= document.getElementById('year').value;
 
-    console.log(name,price,year);
+
+   const product = new Product(name, price, year);
 
     //evento que deja de refrescar la pagina a la hora de enviar datos por submit
     //cada vez que se envian datos desde un formulario la pagina se refresca
     // para poder recibir luego eventos que un servidor envia, la respuesta que un servidor envia!
+    e.preventDefault();
 });
