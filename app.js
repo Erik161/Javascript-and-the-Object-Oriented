@@ -22,7 +22,15 @@ class UI {
         </div>
     `;
         productList.appendChild(element);
+        this.resetForm();
     }
+
+
+    resetForm(){
+        document.getElementById('product-form').reset();
+    }
+
+
 
     deleteProduct(){
 
@@ -47,6 +55,7 @@ document.getElementById('product-form')
 
    const ui = new UI();
    ui.addProduct(product);
+   ui.resetForm();
 
     //evento que deja de refrescar la pagina a la hora de enviar datos por submit
     //cada vez que se envian datos desde un formulario la pagina se refresca
