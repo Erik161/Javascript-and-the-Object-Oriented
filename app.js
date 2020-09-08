@@ -18,6 +18,7 @@ class UI {
                  <strong>Product</strong>: ${product.name}
                  <strong>Price</strong>: ${product.price}
                  <strong>Year</strong>: ${product.year}
+                 <a href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
     `;
