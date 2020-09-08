@@ -8,8 +8,20 @@ class Product {
 }
 
 class UI {
-    addProduct(){
-
+    addProduct(product){
+    const productList = document.getElementById('product-list');
+    const element = document.createElement('div');
+    //para insertar un elemento HTML
+    element.innerHTML = `
+        <div class="card text-center mb-4">
+            <div class="card-body">
+                 <strong>Product</strong>: ${product.name}
+                 <strong>Price</strong>: ${product.price}
+                 <strong>Year</strong>: ${product.year}
+            </div>
+        </div>
+    `;
+        productList.appendChild(element);
     }
 
     deleteProduct(){
@@ -32,6 +44,9 @@ document.getElementById('product-form')
 
 
    const product = new Product(name, price, year);
+
+   const ui = new UI();
+   ui.addProduct(product);
 
     //evento que deja de refrescar la pagina a la hora de enviar datos por submit
     //cada vez que se envian datos desde un formulario la pagina se refresca
