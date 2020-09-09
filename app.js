@@ -36,6 +36,7 @@ class UI {
     deleteProduct(element){
         if(element.name === 'delete'){
             element.parentElement.parentElement.parentElement.remove();
+            this.showMessage('Product Deleted SuccessFully', 'danger');
         }
     }
     //mensaje cada vez que se agrega un producto o se elimina un producto
