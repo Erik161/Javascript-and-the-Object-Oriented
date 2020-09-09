@@ -70,6 +70,12 @@ document.getElementById('product-form')
    const product = new Product(name, price, year);
 
    const ui = new UI();
+   //mensaje cada vez si no esta dando datos
+    if(name === ''|| price === ''|| year === '') {
+     //se agrega un return para que no aparezca el message de Product Added Successfully
+      return ui.showMessage('Complete Fields Please', 'info');
+    }
+
    ui.addProduct(product);
    ui.resetForm();
    ui.showMessage('Product Added Successfully', 'success' )
