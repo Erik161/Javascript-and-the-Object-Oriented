@@ -53,7 +53,7 @@ class UI {
     //temporizador luego de un tiempo se remueve el evento
     setTimeout(function (){
         document.querySelector('.alert').remove();
-    }, 1000);
+    }, 3000);
     }
 
 }
@@ -73,7 +73,7 @@ document.getElementById('product-form')
    //mensaje cada vez si no esta dando datos
     if(name === ''|| price === ''|| year === '') {
      //se agrega un return para que no aparezca el message de Product Added Successfully
-      return ui.showMessage('Complete Fields Please', 'info');
+      return ui.showMessage('Complete Fields Please', 'warning');
     }
 
    ui.addProduct(product);
