@@ -18,7 +18,7 @@ class UI {
                  <strong>Product</strong>: ${product.name}
                  <strong>Price</strong>: ${product.price}
                  <strong>Year</strong>: ${product.year}
-                 <a href="#" class="btn btn-danger">Delete</a>
+                 <a href="#" class="btn btn-danger" name="delete">Delete</a>
             </div>
         </div>
     `;
@@ -33,8 +33,10 @@ class UI {
 
 
 
-    deleteProduct(){
-
+    deleteProduct(element){
+        if(element.name === 'delete'){
+            element.parentElement.parentElement.parentElement.remove();
+        }
     }
 
     showMessage(){
@@ -62,4 +64,9 @@ document.getElementById('product-form')
     //cada vez que se envian datos desde un formulario la pagina se refresca
     // para poder recibir luego eventos que un servidor envia, la respuesta que un servidor envia!
     e.preventDefault();
+});
+
+document.getElementById('product-list').addEventListener('click', function(e){
+    const ui = new UI();
+    ui.deleteProduct(e.target);
 });
