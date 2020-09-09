@@ -38,9 +38,20 @@ class UI {
             element.parentElement.parentElement.parentElement.remove();
         }
     }
-
-    showMessage(){
-
+    //mensaje cada vez que se agrega un producto o se elimina un producto
+    showMessage(message, cssClass){
+     const div = document.createElement('div');
+     div.className = `alert alert-${cssClass} mt-4`;
+     div.appendChild(document.createTextNode(message));
+     //Showing in DOM 
+    const container = document.querySelector('.container');
+    const app = document.querySelector('#App');
+    // Insert Message in the UI
+    container.insertBefore(div, app);
+    //temporizador luego de un tiempo se remueve el evento
+    setTimeout(function (){
+        document.querySelector('.alert').remove();
+    }, 3000);
     }
 
 }
@@ -59,6 +70,7 @@ document.getElementById('product-form')
    const ui = new UI();
    ui.addProduct(product);
    ui.resetForm();
+   ui.showMessage('Product Added Successfully', 'success' )
 
     //evento que deja de refrescar la pagina a la hora de enviar datos por submit
     //cada vez que se envian datos desde un formulario la pagina se refresca
