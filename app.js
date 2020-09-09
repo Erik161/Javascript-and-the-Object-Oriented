@@ -53,7 +53,7 @@ class UI {
     //temporizador luego de un tiempo se remueve el evento
     setTimeout(function (){
         document.querySelector('.alert').remove();
-    }, 3000);
+    }, 1000);
     }
 
 }
